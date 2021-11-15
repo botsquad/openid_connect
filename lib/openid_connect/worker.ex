@@ -17,6 +17,10 @@ defmodule OpenIDConnect.Worker do
     :ignore
   end
 
+  def init(provider_configs) when is_function(provider_configs) do
+    init(provider_configs.())
+  end
+
   def init(provider_configs) do
     state =
       Enum.into(provider_configs, %{}, fn {provider, config} ->
