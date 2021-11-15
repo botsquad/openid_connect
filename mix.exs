@@ -66,12 +66,12 @@ defmodule OpenIDConnect.Mixfile do
   # Type "mix help deps" for more examples and options
   defp deps do
     [
-      {:httpoison, "~> 1.2.0"},
-      {:jason, "~> 1.0.0"},
+      {:httpoison, "~> 1.2"},
+      {:jason, ">= 1.0.0"},
       {:jose, "~> 1.8"},
-      {:earmark, "~> 1.2.5", only: :dev},
-      {:ex_doc, "~> 0.18.3", only: :dev},
-      {:mox, "~> 0.3.2", only: :test}
+      {:earmark, "~> 1.2", only: :dev},
+      {:ex_doc, "~> 0.18", only: :dev},
+      {:mox, "~> 0.4", only: :test}
     ]
   end
 end
